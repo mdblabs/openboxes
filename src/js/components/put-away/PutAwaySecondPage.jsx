@@ -390,7 +390,6 @@ class PutAwaySecondPage extends Component {
         onExpandedChange,
       };
 
-    console.log('putaway item: ', this.props.putAway.putawayItems);
     return (
       <div className="main-container">
         <h1><Translate id="putAway.putAway.label" defaultMessage="Putaway -" /> {this.props.putAway.putawayNumber}</h1>

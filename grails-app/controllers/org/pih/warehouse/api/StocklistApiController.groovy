@@ -6,7 +6,7 @@
 * By using this software in any fashion, you are agreeing to be bound by
 * the terms of this license.
 * You must not remove this notice, or any other, from this software.
-**/ 
+**/
 package org.pih.warehouse.api
 
 import grails.converters.JSON
@@ -26,7 +26,7 @@ class StocklistApiController {
         Requisition requisition = new Requisition(params)
         requisition.isTemplate = true
         List<Requisition> requisitions = requisitionService.getAllRequisitionTemplates(requisition, params)
-        render ([data:requisitions] as JSON)
+        render ([data:requisitions?.collect { [ id: it.id, name: it.name ] }] as JSON)
     }
 
     def read = {
