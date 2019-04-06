@@ -10,7 +10,7 @@
   },
   "scripts": {
     "watch": "webpack --watch --colors --progress --mode=development",
-    "bundle": "webpack --mode=production",
+    "bundle": "webpack",
     "test": "jest",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build"
